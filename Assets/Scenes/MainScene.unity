@@ -300,7 +300,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2046289782}
   - {fileID: 849459226}
   - {fileID: 821648411}
   - {fileID: 1250082375}
@@ -541,9 +540,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 0.631, g: 0.047, b: 0.047, a: 1}
+  gameSceneIndex: 0
   startGameSceneIndex: 1
   settingsSceneIndex: 2
   achievementsSceneIndex: 3
+  Level1SceneIndex: 4
+  SecretSceneIndex: 5
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  volume: 0.5
 --- !u!1 &418286431
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,9 +1003,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 0.631, g: 0.047, b: 0.047, a: 1}
+  gameSceneIndex: 0
   startGameSceneIndex: 1
   settingsSceneIndex: 2
   achievementsSceneIndex: 3
+  Level1SceneIndex: 4
+  SecretSceneIndex: 5
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  volume: 0.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,6 +1821,7 @@ Transform:
   m_LocalScale: {x: 128, y: 128, z: 128}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2046289782}
   - {fileID: 1068032561}
   - {fileID: 368493514}
   - {fileID: 1161034975}
@@ -2218,9 +2230,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 0.631, g: 0.047, b: 0.047, a: 1}
+  gameSceneIndex: 0
   startGameSceneIndex: 1
   settingsSceneIndex: 2
   achievementsSceneIndex: 3
+  Level1SceneIndex: 4
+  SecretSceneIndex: 5
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  volume: 0.5
 --- !u!1 &1150918773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,9 +2467,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
   defaultColor: {r: 0.631, g: 0.047, b: 0.047, a: 1}
+  gameSceneIndex: 0
   startGameSceneIndex: 1
   settingsSceneIndex: 2
   achievementsSceneIndex: 3
+  Level1SceneIndex: 4
+  SecretSceneIndex: 5
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  volume: 0.5
 --- !u!1 &1198410941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,6 +3369,7 @@ GameObject:
   - component: {fileID: 2046289782}
   - component: {fileID: 2046289784}
   - component: {fileID: 2046289783}
+  - component: {fileID: 2046289785}
   m_Layer: 5
   m_Name: GameName
   m_TagString: Untagged
@@ -3361,15 +3386,15 @@ RectTransform:
   m_GameObject: {fileID: 2046289781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.32, y: 2.32, z: 2.32}
+  m_LocalScale: {x: 0.018125, y: 0.018125, z: 0.018125}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 52628916}
+  m_Father: {fileID: 849459226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2623333, y: 0.8565625}
   m_AnchorMax: {x: 0.7626666, y: 0.94281244}
-  m_AnchoredPosition: {x: -8.999954, y: 49.040035}
-  m_SizeDelta: {x: -200.23999, y: -66.3999}
+  m_AnchoredPosition: {x: 0, y: 4.380001}
+  m_SizeDelta: {x: 159.99997, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046289783
 MonoBehaviour:
@@ -3413,6 +3438,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046289781}
   m_CullTransparentMesh: 1
+--- !u!114 &2046289785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046289781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b067343616e2874e880d198ad7cf0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  defaultColor: {r: 0.631, g: 0.047, b: 0.047, a: 1}
+  gameSceneIndex: 0
+  startGameSceneIndex: 1
+  settingsSceneIndex: 2
+  achievementsSceneIndex: 3
+  Level1SceneIndex: 4
+  SecretSceneIndex: 5
+  clickSound: {fileID: 0}
+  hoverSound: {fileID: 0}
+  volume: 0.5
 --- !u!1 &2108128930
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,8 @@ public class Buttons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IP
   public int startGameSceneIndex = 1;
   public int settingsSceneIndex = 2;
   public int achievementsSceneIndex = 3;
-  public int laborotoryLevelSceneIndex = 4;
+  public int Level1SceneIndex = 4;
+  public int SecretSceneIndex = 5;
 
   [Header("Sound Settings")]
   public AudioClip clickSound; // Звук при нажатии
@@ -100,11 +101,15 @@ public class Buttons : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IP
     }
     else if (string.Equals(gameObject.name, "Go", StringComparison.OrdinalIgnoreCase))
     {
-      LoadSceneAsync(laborotoryLevelSceneIndex);
+      LoadSceneAsync(Level1SceneIndex);
     }
     else if (string.Equals(gameObject.name, "Training", StringComparison.OrdinalIgnoreCase))
     {
-      LoadSceneAsync(laborotoryLevelSceneIndex);
+      LoadSceneAsync(Level1SceneIndex);
+    }
+    else if (string.Equals(gameObject.name, "GameName", StringComparison.OrdinalIgnoreCase))
+    {
+      LoadSceneAsync(SecretSceneIndex);
     }
     else if (string.Equals(gameObject.name, "Back", StringComparison.OrdinalIgnoreCase))
     {
