@@ -10,14 +10,14 @@ public class LevelGenerator : MonoBehaviour
   public int mapWidth = 10;
   public int mapHeight = 10;
   [Range(0, 1)]
-  public float redTileProbability = 0.3f; // Вероятность генерации красного тайла.
+  public float redTileProbability = 0.3f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ.
 
   public List<Sprite> npcSprites = new List<Sprite>();
   public List<Sprite> itemSprites = new List<Sprite>();
   [Range(0, 1)]
   public float itemNPCRandomSpawnPossibility = 0.1f;
 
-  public Vector3 spriteScale = new Vector3(16f, 16f, 16f); // Добавляем переменную для масштаба
+  public Vector3 spriteScale = new Vector3(16f, 16f, 16f); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
   void Start()
   {
@@ -26,10 +26,10 @@ public class LevelGenerator : MonoBehaviour
 
   void GenerateLevel()
   {
-    // 1. Создаем карту из тайлов.
+    // 1. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
     GenerateTiles();
 
-    // 2. Размещаем NPC и предметы.
+    // 2. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ NPC пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
     PopulateLevel();
   }
 
@@ -48,7 +48,7 @@ public class LevelGenerator : MonoBehaviour
         GameObject tilePrefab = Random.value < redTileProbability ? hexTileRedPrefab : hexTileWhitePrefab;
 
         GameObject tile = Instantiate(tilePrefab, worldPosition, Quaternion.identity);
-        tile.transform.SetParent(this.transform); // Организуем иерархию.
+        tile.transform.SetParent(this.transform); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
 
         // Set the name for easier identification
         tile.name = $"Tile_{x}_{y}";
@@ -103,7 +103,7 @@ public class LevelGenerator : MonoBehaviour
     SpriteRenderer sr = npc.AddComponent<SpriteRenderer>();
     sr.sprite = sprite;
     npc.transform.SetParent(this.transform);
-    npc.transform.localScale = spriteScale; // Устанавливаем масштаб
+    npc.transform.localScale = spriteScale; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
   }
 
   void SpawnItem(Vector3 position, Sprite sprite)
@@ -113,6 +113,6 @@ public class LevelGenerator : MonoBehaviour
     SpriteRenderer sr = item.AddComponent<SpriteRenderer>();
     sr.sprite = sprite;
     item.transform.SetParent(this.transform);
-    item.transform.localScale = spriteScale; // Устанавливаем масштаб
+    item.transform.localScale = spriteScale; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
   }
 }

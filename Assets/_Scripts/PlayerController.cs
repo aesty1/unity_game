@@ -33,11 +33,11 @@ public class PlayerController : MonoBehaviour
 
   private bool IsValidMove(Vector3Int targetCell)
   {
-    // Проверка расстояния (только соседние клетки)
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
     if (Vector3Int.Distance(currentCell, targetCell) > 1.5f)
       return false;
 
-    // Проверка проходимости
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     return walkableTilemap.HasTile(targetCell);
   }
 
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
     currentCell = targetCell;
     isMoving = false;
 
-    // Тут вызов логики хода врагов/событий
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     FindObjectOfType<GameManager>().CompletePlayerTurn();
   }
 }
